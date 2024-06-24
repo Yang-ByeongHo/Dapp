@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>검색</title>
+    <script src="./bower_components/web3/dist/web3.min.js"></script>
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="./ArtAuction.js"></script>
+    <link rel = "stylesheet" href = "styles.css">
+</head>
+<body>
+        
+    <a href = "./index.html" class = "button" id = "a">메인</a>
+
+    <div class = "container">
+        <h1>미술품 정보</h1>
+        <div>
+            <label for = "artNumber">작품 번호</label>
+            <input type = "text" id = "artNumber" name = "artNumber" placeholder = "숫자만 입력">
+            <button onclick = "art()" class = "button">확인</button>
+        </div>
+        <div id = "artDisplay"></div>
+    </div>
+
+    <div class = "container">
+        <h1>경매 정보</h1>
+        <div>
+            <label for = "auctionNumber">작품번호</label>
+            <input type = "text" id = "auctionNumber" name = "auctionNumber" placeholder = "숫자만 입력">
+            <button onclick = "Auction()" class = "button">확인</button>
+        </div>
+        <div id = "AuctionDisplay"></div>
+    </div>
+
+
+    <div class = "container">
+        <div>
+            <label for = "EndId">경매종료:</label>
+            <input type = "text" id = "EndId">
+        </div>
+        <div>
+            <label for = "owner">지갑주소</label>
+        <input type = "text" id = "owner" name = "owner">
+        </div>
+        <button onclick = "AuctionEnd()" class = "button">확인</button>
+    </div>
+
+</body>
+</html>
+

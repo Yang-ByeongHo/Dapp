@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "UTF-8">
+    <title>경매</title>
+    <script src="./bower_components/web3/dist/web3.min.js"></script>
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src = "./ArtAuction.js"></script>
+    <link rel = "stylesheet" href = "styles.css">
+</head>
+<body>
+    <a href = "./index.html" class = "button" id = "a">메인</a>
+    <h1>경매</h1>
+    <div class = "container">
+        <div>
+            <label for = "buyer">지갑주소:</label>
+            <input type = "text" id = "buyer">
+        </div>
+        <div>
+            <label for = "artId">미술품 번호:</label>
+            <input type = "text" id = "artId">
+        </div>
+        <div>
+            <label for = "amount">Ether</label>
+            <input type = "number" id = "amount" name = "amount">
+        </div>
+        <div id = "buyFail"></div>
+        <button onclick = "Buy()" class = "button">참여</button>
+        </div>
+    <div id = "allArtDisplay"></div>
+    
+    <script>        
+        displayAllArt();
+    </script>
+</body>
+</html>
+
+

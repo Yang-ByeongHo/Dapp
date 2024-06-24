@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+input::placeholder {
+    color: gray;
+    font-weight: lighter;
+    font-style:italic;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+/* 공통 스타일 */
+input, .button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* 버튼 스타일 */
+.button {
+    background: #1AAB8A;
+    color: #fff;
+    border: none;
+    position: relative;
+    height: 60px;
+    font-size: 1.6em;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+    display: inline-block; /* Ensure <a> and <button> are treated similarly */
+    text-align: center; /* Ensure text is centered */
+    line-height: 60px; /* Vertically center text for <a> elements */
+}
+
+/* 호버 효과 */
+.button:hover {
+    background: #fff;
+    color: #1AAB8A;
+}
+
+/* 버튼의 before와 after 스타일 */
+.button:before, .button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #1AAB8A;
+    transition: 400ms ease all;
+}
+
+.button:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+/* 호버 효과 적용 시 before와 after 스타일 */
+.button:hover:before, .button:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
+
+/* 앵커 태그 기본 스타일 제거 */
+a {
+    text-decoration: none;
+    display: inline-block; /* Ensure <a> and <button> are treated similarly */
+}
+
+#a {
+    width: 200px;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+
+/* 전체 컨테이너를 flexbox로 설정 */
+#allArtDisplay {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* 각 아트 컨테이너의 스타일 설정 */
+.art-container {
+    width: 33%; /* 두 개씩 나란히 배치하기 위해 */
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 미술품 정보와 경매 정보 스타일 */
+.art-details, .auction-details {
+    margin-bottom: 20px;
+}
+
+/* 미술품 번호와 경매 번호를 나란히 배치 */
+.art-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* 개별 섹션을 세로로 정렬 */
+.art-details, .auction-details {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.art-details h3, .auction-details h3 {
+    margin-top: 0;
+}
+
+/* 이미지 스타일 */
+.art-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto 0 auto;
+    border-radius: 8px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    /* 화면이 좁아졌을 때 한 줄에 하나씩 배치 */
+    .art-container {
+        width: 100%;
+    }
+    
+    .art-content {
+        flex-direction: column;
+    }
+
+    .art-details, .auction-details {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}

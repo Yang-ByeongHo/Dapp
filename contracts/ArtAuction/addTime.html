@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "UTF-8">
+    <title>Art Auction</title>
+    <script src="./bower_components/web3/dist/web3.min.js"></script>
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src = "./ArtAuction.js"></script>
+    <link rel = "stylesheet" href = "styles.css">
+</head>
+
+<body>    
+    <a href = "./index.html" class = "button" id = "a">메인</a>
+    <div class = "container">
+        <h1>경매 시간 추가</h1>
+        <div>
+            <label for = "artOwner">주소:</label>
+            <input type = "text" id = "artOwner">
+        </div>
+        <div>
+            <label for = "artId">작품 번호</label>
+            <input type = "text" id = "artId">
+        </div>
+        <div>
+            <label for = "time">추가 시간(초)</label>
+            <input type = "text" id = "time">
+        </div>
+        <button onclick = "addArtTime()" class = "button">추가</button>
+    </div>
+
+</body>

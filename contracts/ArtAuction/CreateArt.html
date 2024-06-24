@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "UTF-8">
+    <title>Art Auction</title>
+    <script src="./bower_components/web3/dist/web3.min.js"></script>
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="./ArtAuction.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <a href = "./index.html" class = "button" id = "a">메인</a>
+    <div class = "container">
+        <h1>등록</h1>
+        <form id = "imageform">
+            <div>
+                <label for = "image">이미지:</label>
+                <input type = "file" id = "image" name = "image">
+            </div>
+
+        <div>
+            <label for = "artOwner">주소:</label>
+            <input type = "text" id = "artOwner" name = "artOwner" placeholder = "지갑주소를 써주세요">
+        </div>
+        <div>
+            <label for = "artId">작품 번호</label>
+            <input type = "text" id = "artId" name = "artId" placeholder = "숫자만">
+        </div>
+        <div>
+            <label for = "pieceName">작품 이름:</label>
+            <input type = "text" id = "pieceName" name = "pieceName" placeholder = "작품 이름">
+        </div>
+        <div>
+            <label for = "price">가격 (in Ether):</label>
+            <input type = "text" id = "price" name = "price" placeholder = "1 Ether 단위">
+        </div>
+        <div>
+            <label for = "duration">경매시간(초):</label>
+            <input type = "text" id = "duration" name = "duration" placeholder = "숫자만 입력해주세요">
+        </div>
+        <div>
+            <label for = "description">설명:</label>
+            <input type = "text" id = "description" name = "description" placeholder = "작품의 설명을 작성해주세요">
+        </div>
+        <button onclick = "createPiece()" class = "button">등록</button>
+    </form>
+
+    </div>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "UTF-8">
+    <title>Art Auction</title>
+    <script src="./bower_components/web3/dist/web3.min.js"></script>
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="./ArtAuction.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>모든 작품 정보</h1>    
+    <a href = "./CreateArt.html" class = "button" id = "a">작품 등록</a><br>
+    <a href = "./infoArt.html" class = "button" id = "a">작품 보기</a><br>
+    <a href = "./buyArt.html" class = "button" id = "a">경매 참여</a><br>
+    <!-- <a href = "./addTime.html" class = "button" id = "a">경매 시간</a><br> -->
+    <div id = "allArtDisplay"></div>
+    <div id = "contractDeadLine"></div>
+    <script>
+        displayAllArt();
+        ContractDeadLine();
+    </script>
+    </body>
+    </html>

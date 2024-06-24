@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "UTF-8">
+    <title>구매확정</title>
+    <script src="./bower_components/web3/dist/web3.min.js"></script>
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="./ArtAuction.js"></script>
+    <link rel = "stylesheet" href = "styles.css">
+</head>
+<body>
+    <div class = "container">
+        <div>
+            <label for = "EndId">경매종료:</label>
+            <input type = "text" id = "EndId">
+        </div>
+        <div>
+            <label for = "owner">지갑주소</label>
+        <input type = "text" id = "owner" name = "owner">
+        </div>
+        <button onclick = "AuctionEnd()" class = "button">확인</button>
+    </div>
+</body>
